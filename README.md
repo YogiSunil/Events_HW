@@ -1,21 +1,49 @@
 # Events App
 
-To run this code, start by cloning this repository to your computer. Then in a terminal, navigate to the project folder.
+The Events App is a web application that allows users to create, view, and RSVP to events. It also provides functionality to view guest details and manage event attendees. A default event is preloaded for first-time users to explore the app.
 
-To install dependencies, run:
+## Features
+- Create new events with a title, description, date, and time.
+- View a list of all events.
+- RSVP to events as a new or returning guest.
+- View details of individual events, including attendees.
+- View details of individual guests, including the events they are attending.
 
+## Setup Instructions
+
+### 1. Clone the Repository
+Start by cloning this repository to your computer:
 ```
-pip3 install -r requirements.txt
+git clone <repository-url>
 ```
 
-Then rename the `.env.example` file as `.env`:
+### 2. Navigate to the Project Folder
+```
+cd ACS-1220-Events-Homework
+```
 
+### 3. Install Dependencies
+Install the required Python packages:
 ```
-cp .env.example .env
+pip install -r requirements.txt
 ```
 
-Then you can run the server:
+### 4. Run the Application
+Start the Flask development server:
+```
+python app.py
+```
 
+### 5. Access the Application
+Open your web browser and navigate to:
 ```
-python3 app.py
+http://127.0.0.1:5000
 ```
+
+## Notes
+- A default event titled "Welcome Event" is preloaded for first-time users.
+- The application uses SQLite as the database backend.
+- Ensure Python 3.7 or higher is installed on your system.
+
+## Contributing
+Feel free to fork this repository and submit pull requests for new features or bug fixes.

@@ -9,14 +9,14 @@
     correct title, description, date, time, and number of guests
 -->
 
-<h1>Zoom Party!</h1>
+<h1>{{ event.title }}</h1>
 
-<p>Come join us for some fun zoom games!</p>
+<p>{{ event.description }}</p>
 
-<p><strong>Date:</strong> Friday March 5, 2021</p>
-<p><strong>Time:</strong> 5:00 PM</p>
+<p><strong>Date:</strong> {{ event.date_and_time.strftime('%A %B %d, %Y') }}</p>
+<p><strong>Time:</strong> {{ event.date_and_time.strftime('%I:%M %p') }}</p>
 
-<p><strong>Number of Guests:</strong> 5</p>
+<p><strong>Number of Guests:</strong> {{ event.guests|length }}</p>
 
 <form method="POST">
     <fieldset>
@@ -56,15 +56,11 @@
     </fieldset>
 </form>
 
-<!-- TODO: Display the actual guests attending -->
-
 <h2>Guests Attending:</h2>
 <ul>
-    
-    <li><a href="/guest/1">Meredith</a></li>
-    <li><a href="/guest/2">Dani</a></li>
-    <li><a href="/guest/3">Jordan</a></li>
-    <li><a href="/guest/4">Ducky</a></li>
+    {% for guest in event.guests %}
+    <li><a href="/guest/{{ guest.id }}">{{ guest.name }}</a></li>
+    {% endfor %}
 </ul>
 
 {% endblock %}

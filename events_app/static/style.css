@@ -1,10 +1,125 @@
+/* Modernized styles with a cool background */
+
+/* Apply a gradient background to the entire page */
 body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Cool gradient */
+    color: #f0f0f0; /* Light text color for better contrast */
 }
 
+/* Center the content box with a modern card style */
 #content {
-    width: 75%;
+    width: 80%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque background */
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333333; /* Darker text color for readability */
+}
+
+/* Style headers with a modern font and hover effect */
+h1, h2 {
+    font-weight: 700;
+    color: #2a5298;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover {
+    color: #1e3c72;
+}
+
+/* Style links with hover effects */
+a {
+    color: #1e3c72;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+a:hover {
+    color: #2a5298;
+    transform: scale(1.05);
+}
+
+/* Modernize buttons */
+button, input[type="submit"] {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+    transform: scale(1.05);
+}
+
+/* Style form fields */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 8px rgba(42, 82, 152, 0.5);
+    outline: none;
+}
+
+/* Style lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #2a5298;
+    transition: transform 0.2s;
+}
+
+ul li:hover {
+    transform: translateX(10px);
+}
+
+/* Add a subtle hover effect to list links */
+ul li a {
+    color: #1e3c72;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #2a5298;
+}
+
+/* Add a modern footer style */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
 }
 
 .event-container {

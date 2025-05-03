@@ -9,16 +9,17 @@
     events attending
 -->
 
-<h1>Ducky</h1>
+<h1>{{ guest.name }}</h1>
 
-<p><strong>Email:</strong> ducky@dogs.co</p>
-<p><strong>Phone:</strong> 111-111-1111</p>
+<p><strong>Email:</strong> {{ guest.email }}</p>
+<p><strong>Phone:</strong> {{ guest.phone }}</p>
 
 <h2>Events Attending:</h2>
 
 <ul>
-    <li><a href="/event/1">Zoom Party!</a></li>
-    <li><a href="/event/2">Picnic in the Park</a></li>
+    {% for event in guest.events_attending %}
+    <li><a href="/event/{{ event.id }}">{{ event.title }}</a></li>
+    {% endfor %}
 </ul>
 
 {% endblock %}
