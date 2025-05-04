@@ -14,12 +14,7 @@ The Events App is a web application that allows users to create, view, and RSVP 
 ### 1. Clone the Repository
 Start by cloning this repository to your computer:
 ```
-git clone <repository-url>
-```
-
-### 2. Navigate to the Project Folder
-```
-cd ACS-1220-Events-Homework
+git clone https://github.com/YogiSunil/Events_HW.git
 ```
 
 ### 3. Install Dependencies
